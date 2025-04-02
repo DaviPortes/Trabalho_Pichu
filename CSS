@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: rgba(34, 34, 34, 0.9); /* 0.9 referente a transparencia */
+    background-color: rgba(34, 34, 34, 0.9); /* 0.9 referente a transparência */
     width: 100%;
     padding: 15px;
     position: fixed;
@@ -95,17 +95,69 @@ nav ul li a:hover {
     margin: auto;
 }
 
-.image-container img {
-    width: 100%;
-    max-width: 280px;
-    height: 180px; /* Tamanho padrão nas imagens */
-    object-fit: cover; /* Não estica as imagens */
+.product {
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s; /* garante que o efeito de hover seja gradativo */
+    color: white;
+    transition: transform 0.3s;
 }
 
-.image-container img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #ffcc00;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #ffaa00;
+}
+
+/* padroniza imagem produtos */
+.product img {
+    width: 100%;
+    max-width: 280px; /* Largura máxima para as imagens */
+    height: 180px;    /* Altura padronizada */
+    object-fit: cover; /* impede distorção */
+    border-radius: 10px;
+}
+
+/* Estilo do botão de carrinho */
+.view-cart-button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
+
+.view-cart-button:hover {
+    background-color: #ffaa00;
 }
 
 .contact {

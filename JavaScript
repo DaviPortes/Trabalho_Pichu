@@ -1,0 +1,45 @@
+let cart = [];
+
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const viewCartButton = document.getElementById('view-cart');
+
+// somar os valores
+function updateCartButton() {
+    const total = cart.reduce((acc, item) => {
+        const price = parseFloat(item.price.replace('R$', '').replace('.', '').replace(',', '.'));
+        return acc + price;
+    }, 0);
+    viewCartButton.textContent = `Carrinho: R$ ${total.toFixed(2).replace('.', ',')}`;
+}
+
+// Adicionar produtos ao carrinho
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const product = event.target.closest('.product');
+        const productName = product.querySelector('.product-name').textContent;
+        const productPrice = product.querySelector('.product-price').textContent;
+
+        cart.push({ name: productName, price: productPrice });
+        alert(`${productName} foi adicionado ao carrinho!`);
+        updateCartButton();  // Atualiza o valor do carrinho
+    });
+});
+
+// visualiza o carrinho
+viewCartButton.addEventListener('click', () => {
+    if (cart.length === 0) {
+        alert("Seu carrinho está vazio.");
+        return;
+    }
+
+    let cartDetails = "Produtos no Carrinho:\n\n";
+    cart.forEach((item, index) => {
+        cartDetails += `${index + 1}. ${item.name} - ${item.price}\n`;
+    });
+    const total = cart.reduce((acc, item) => {
+        const price = parseFloat(item.price.replace('R$', '').replace('.', '').replace(',', '.'));
+        return acc + price;
+    }, 0);
+    cartDetails += `\nTotal: R$ ${total.toFixed(2).replace('.', ',')}`;
+    alert(cartDetails);
+});

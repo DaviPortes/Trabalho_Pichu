@@ -12,32 +12,58 @@
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#gallery">Produtos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
+        <!-- Botão pra visualizar o carrinho -->
+        <button id="view-cart" class="view-cart-button">Carrinho: R$ 0,00</button>
     </header>
     
     <section id="home" class="hero">
         <h2>Velocidade e Estilo</h2>
-        <p>Enconte sua nova inspiração</p>
+        <p>Encontre sua nova inspiração</p>
     </section>
 
     <section id="gallery" class="gallery">
-        <h2>Galeria</h2>
+        <h2>Produtos</h2>
         <div class="image-container">
-            <img src="imagens/carro1.jpeg" alt="Carro 1">
-            <img src="imagens/banco.jpg" alt="Banco Esportivo">
-            <img src="imagens/nitro.jpg" alt="Sistema de Nitro">
-            <img src="imagens/roda.jpeg" alt="Rodas Esportivas">
-            <img src="imagens/biela.jpeg" alt="Biela de Alto Desempenho">
-            <img src="imagens/embreagem.jpg" alt="Embreagem de Performance">
-            <img src="imagens/carro1.jpeg" alt="Carro 1">
-            <img src="imagens/banco.jpg" alt="Banco Esportivo">
-            <img src="imagens/nitro.jpg" alt="Sistema de Nitro">
-            <img src="imagens/roda.jpeg" alt="Rodas Esportivas">
-            <img src="imagens/biela.jpeg" alt="Biela de Alto Desempenho">
-            <img src="imagens/embreagem.jpg" alt="Embreagem de Performance">
+            <div class="product">
+                <img src="imagens/carro1.jpeg" alt="Carro 1">
+                <p class="product-name">Turbo HKS</p>
+                <p class="product-price">R$ 20.000,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="imagens/banco.jpg" alt="Banco Esportivo">
+                <p class="product-name">Banco Bride</p>
+                <p class="product-price">R$ 3.500,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="imagens/nitro.jpg" alt="Sistema de Nitro">
+                <p class="product-name">Sistema de Nitro</p>
+                <p class="product-price">R$ 5.000,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="imagens/roda.png" alt="Rodas Esportivas">
+                <p class="product-name">Rodas Esportivas</p>
+                <p class="product-price">R$ 3.500,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="imagens/biela.jpeg" alt="Biela de Alto Desempenho">
+                <p class="product-name">Biela de Alto Desempenho</p>
+                <p class="product-price">R$ 8.800,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="imagens/embreagem.jpg" alt="Embreagem de Performance">
+                <p class="product-name">Embreagem de Performance</p>
+                <p class="product-price">R$ 5.200,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
         </div>
     </section>
 
@@ -49,5 +75,7 @@
     <footer>
         <p>&copy; 2025 Gotham Motorsport. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="cart.js"></script>
 </body>
 </html>
